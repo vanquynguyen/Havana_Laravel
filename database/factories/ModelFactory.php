@@ -10,7 +10,13 @@ use Faker\Generator as Faker;
 | This directory should contain each of the model factory definitions for
 | your application. Factories provide a convenient way to generate new
 | model instances for testing / seeding your application's database.
-|
+| + 20 Category
+| + 10 Bill
+| + 50 Bill details
+| + 20 Users
+| + 50 Products
+| + 150 images detail
+| + 4 Size
 */
 
 $factory->define(App\User::class, function (Faker $faker) {
@@ -63,7 +69,7 @@ $factory->define(App\BillDetail::class, function (Faker $faker) {
         'product_id' => $faker->numberBetween($min = 1, $max = 200),
         'unit_price' => $faker->numberBetween($min = 10000, $max = 2000000),
         'quantity' => $faker->numberBetween($min = 1, $max = 50),
-        'bill_id' => $faker->numberBetween($min = 2, $max = 21)
+        'bill_id' => $faker->numberBetween($min = 1, $max = 10)
     ];
 });
 
@@ -95,7 +101,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
 $factory->define(App\Size::class, function (Faker $faker) {
 
     return [
-        'name' => $faker->name,
+        'name' => $faker->word,
     ];
 });
 
@@ -111,6 +117,6 @@ $factory->define(App\Image::class, function (Faker $faker) {
 
     return [
         'name' => 'product_detail.jpg',
-        'product_id' => $faker->numberBetween($min = 1, $max = 500),
+        'product_id' => $faker->numberBetween($min = 1, $max = 50),
     ];
 });

@@ -20,6 +20,7 @@ class CreateBillsTable extends Migration
             $table->mediumText('note')->nullable();
             $table->mediumText('address');
             $table->string('phone', 25);
+            $table->tinyInteger('payment')->default(0);
             $table->integer('user_id')->nullable()->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

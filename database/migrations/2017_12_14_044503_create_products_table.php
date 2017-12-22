@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('promo_price');
             $table->integer('quantity');
             $table->text('description');
-            $table->string('images', 150);
+            $table->string('image', 150);
             $table->tinyInteger('status');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
