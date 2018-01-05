@@ -92,9 +92,9 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'promo_price' => $faker->numberBetween($min = 10000, $max = 2000000),
         'quantity' => $faker->numberBetween($min = 1, $max = 50),
         'description' => $faker->text,
-        'images' => 'product.jpg',
+        'image' => 'product.jpg',
         'status' => $faker->numberBetween($min = 1, $max = 2),
-        'category_id' => $faker->numberBetween($min = 1, $max = 20),
+        'categories_id' => $faker->numberBetween($min = 1, $max = 20),
     ];
 });
 

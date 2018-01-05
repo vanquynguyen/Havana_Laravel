@@ -23,8 +23,8 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->string('image', 150);
             $table->tinyInteger('status');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->integer('categories_id')->unsigned();
+            $table->foreign('categories_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
