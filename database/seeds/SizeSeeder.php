@@ -11,6 +11,6 @@ class SizeSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Size::class,4)->create();
+        factory(App\Models\Size::class,4)->create();
     }
 }

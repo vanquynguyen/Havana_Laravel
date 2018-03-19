@@ -19,7 +19,7 @@ use Faker\Generator as Faker;
 | + 4 Size
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(App\Models\User::class, function (Faker $faker) {
     static $password;
 
     return [
@@ -32,7 +32,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Categories::class, function (Faker $faker) {
+$factory->define(App\Models\Categories::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
@@ -42,7 +42,7 @@ $factory->define(App\Categories::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Bill::class, function (Faker $faker) {
+$factory->define(App\Models\Bill::class, function (Faker $faker) {
 
     return [
         'total' => $faker->numberBetween($min = 10000, $max = 2000000),
@@ -54,7 +54,7 @@ $factory->define(App\Bill::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Post::class, function (Faker $faker) {
+$factory->define(App\Models\Post::class, function (Faker $faker) {
 
     return [
         'title' => $faker->text(),
@@ -63,7 +63,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\BillDetail::class, function (Faker $faker) {
+$factory->define(App\Models\BillDetail::class, function (Faker $faker) {
 
     return [
         'product_id' => $faker->numberBetween($min = 1, $max = 200),
@@ -73,7 +73,7 @@ $factory->define(App\BillDetail::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Comment::class, function (Faker $faker) {
+$factory->define(App\Models\Comment::class, function (Faker $faker) {
 
     return [
         'content' => $faker->numberBetween($min = 1, $max = 200),
@@ -83,7 +83,7 @@ $factory->define(App\Comment::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Product::class, function (Faker $faker) {
+$factory->define(App\Models\Product::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
@@ -98,14 +98,14 @@ $factory->define(App\Product::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Size::class, function (Faker $faker) {
+$factory->define(App\Models\Size::class, function (Faker $faker) {
 
     return [
         'name' => $faker->word,
     ];
 });
 
-$factory->define(App\Product_Size::class, function (Faker $faker) {
+$factory->define(App\Models\Product_Size::class, function (Faker $faker) {
 
     return [
         'size_id' => $faker->numberBetween($min = 1, $max = 20),
@@ -113,7 +113,7 @@ $factory->define(App\Product_Size::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Image::class, function (Faker $faker) {
+$factory->define(App\Models\Image::class, function (Faker $faker) {
 
     return [
         'name' => 'product_detail.jpg',
