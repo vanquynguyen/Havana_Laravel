@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="3.2.2">
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Models/Product_Size.php">
+ <error line="7" column="1" severity="error" message="Class name &quot;Product_Size&quot; is not in camel caps format" source="Squiz.Classes.ValidClassName.NotCamelCaps"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Models/User.php">
+ <error line="18" column="17" severity="error" message="Each value in a multi-line array must be on a new line" source="Framgia.Arrays.ArrayDeclaration.ValueNoNewline"/>
+ <error line="18" column="26" severity="error" message="Each value in a multi-line array must be on a new line" source="Framgia.Arrays.ArrayDeclaration.ValueNoNewline"/>
+ <error line="27" column="21" severity="error" message="Each value in a multi-line array must be on a new line" source="Framgia.Arrays.ArrayDeclaration.ValueNoNewline"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Models/Product.php">
+ <error line="9" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+ <error line="13" column="30" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="14" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+ <error line="19" column="16" severity="error" message="String &quot;Dang Minh Truong&quot; does not require double quotes; use single quotes instead" source="Framgia.Strings.DoubleQuoteUsage.NotRequired"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Models/Categories.php">
+ <error line="11" column="30" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="12" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Http/Controllers/LaboratoryController.php">
+ <error line="10" column="26" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="11" column="6" severity="error" message="Line indented incorrectly; expected at least 8 spaces, found 5" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+ <error line="12" column="6" severity="error" message="Line indented incorrectly; expected at least 8 spaces, found 5" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Repositories/UserRepository.php">
+ <error line="3" column="27" severity="error" message="Expected 1 blank line at end of file; 2 found" source="PSR2.Files.EndFileNewline.TooMany"/>
+</file>
+<file name="/home/dang.minh.truong/Documents/projects/Laravel/Havana_Laravel/app/Repositories/Contracts/RepositoryInterface.php">
+ <error line="5" column="31" severity="error" message="Opening brace of a interface must be on the line after the definition" source="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
+ <error line="6" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+ <error line="7" column="1" severity="error" message="Expected 1 newline at end of file; 0 found" source="PSR2.Files.EndFileNewline.NoneFound"/>
+</file>
+</checkstyle>
+

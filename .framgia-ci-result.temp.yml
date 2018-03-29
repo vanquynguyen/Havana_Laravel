@@ -1,0 +1,4 @@
+phpcs:
+  comment: true
+  exit_code: 512
+  ignore: false
