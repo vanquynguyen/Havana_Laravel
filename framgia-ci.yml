@@ -1,18 +1,9 @@
 clone:
   git:
-    image: plugins/git
+    image: dangminhtruong/dockergit
     # depth: 1
     # tags: true
     # branch: fcp
-pipeline:
-  restore-cache:
-    image: drillster/drone-volume-cache
-    restore: true
-    mount:
-      - ./node_modules
-      - ./vendor
-    volumes:
-      - /tmp/cache:/cache
   javascript:
     image: node:8.9.1
     group: laravel
@@ -29,40 +20,4 @@ pipeline:
     group: laravel
     commands:
       - phpcs --standard=Framgia --encoding=utf-8 app
-  composer:
-    image: chimlon/phpunit
-    group: laravel
-    commands:
-      - cp .env.testing.example .env
-      - composer install
-      # - php artisan key:generate
-      # - php artisan migrate --database=mysql_test
-      # - php -dzend_extension=xdebug.so vendor/bin/phpunit
-  notify:
-    image: chimlon/chatwork
-    when:
-      event: [push]
-      status: [ success ]
-  rebuild-cache:
-    image: drillster/drone-volume-cache
-    rebuild: true
-    mount:
-      - ./node_modules
-      - ./vendor
-    volumes:
-      - /tmp/cache:/cache
-  # rocketeer:
-  #   image: fdplugins/ssh-php:php5
-  #   when:
-  #     branch: fcp
-  #     event: [ push, tag ]
-  #   commands:
-  #     - php rocketeer.phar deploy --on=staging --no-interaction
-# services:
-#   mysql:
-#     image: mysql
-#     environment:
-#       MYSQL_DATABASE: homestead_test
-#       MYSQL_USER: homestead_test
-#       MYSQL_PASSWORD: secret
-#       MYSQL_ROOT_PASSWORD: root
+
