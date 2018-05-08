@@ -1,23 +1,24 @@
-clone:
-  git:
-    image: dangminhtruong/dockergit
-    # depth: 1
-    # tags: true
-    # branch: fcp
-  javascript:
-    image: node:8.9.1
-    group: laravel
+build:
+  framgia:
+    image: framgia_ci_workspace
     commands:
-      - yarn install
-      - yarn run dev
-  eslint:
-    image: chimlon/eslint
-    group: laravel
-    commands:
-      - eslint resources/assets/ --ext .js --ignore-pattern 'resources/assets/*'
-  phpcs:
-    image: chimlon/phpcs
-    group: laravel
-    commands:
-      - phpcs --standard=Framgia --encoding=utf-8 app
-
+    - composer install
+    - framgia-ci run
+compose:
+  database:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: homestead_test
+      MYSQL_USER: homestead_test
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+cache:
+  mount:
+    - .git
+    - vendor
+deploy:
+  docker:
+    username: octocat
+    password: password
+    email: dangminhtruong@github.com
+    repo: dangminhtruong/test
