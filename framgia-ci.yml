@@ -1,6 +1,6 @@
 build:
   framgia:
-    image: dangminhtruong/dockerlaravel
+    image: framgia/laravel-workspace
     commands:
     - composer install
     - framgia-ci run
