@@ -3,7 +3,7 @@ build:
     image: framgia/laravel-workspace
     commands:
     - composer install
-    - framgia-ci run
+    - vendor/bin/phpunit
 compose:
   database:
     image: mysql
