@@ -1,9 +1,13 @@
 build:
-  framgia:
+  phpunit:
     image: framgia/laravel-workspace
     commands:
     - composer install
     - vendor/bin/phpunit
+  phpcs:
+    image: dangminhtruong/dockerlaravel
+    commands:
+    - phpcs app
 compose:
   database:
     image: mysql
