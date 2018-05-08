@@ -12,10 +12,6 @@ compose:
       MYSQL_USER: homestead_test
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: root
-cache:
-  mount:
-    - .git
-    - vendor
 deploy:
   docker:
     username: octocat
