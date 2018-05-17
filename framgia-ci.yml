@@ -7,7 +7,7 @@ build:
   phpcs:
     image: dangminhtruong/dockerlaravel
     commands:
-    - vendor/bin/phpunit
+    - phpcs app/Civ3/
 compose:
   database:
     image: mysql
