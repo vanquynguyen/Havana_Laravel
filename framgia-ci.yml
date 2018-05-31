@@ -9,8 +9,8 @@ build:
     commands:
     - eslint resources/assets/js
     - phpmd app
-    - phpcpd
-    - phpmetrics
+    - phpcpd app
+    - phpmetrics app
     - echo dangminhtruong
 compose:
   database:
