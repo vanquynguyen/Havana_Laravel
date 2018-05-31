@@ -8,6 +8,7 @@ build:
     image: dangminhtruong/dockerlaravel:latest
     commands:
     - eslint resources/assets/js
+    - echo dangminhtruong
 compose:
   database:
     image: mysql
