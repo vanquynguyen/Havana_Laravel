@@ -22,4 +22,4 @@ deploy:
     username: octocat
     password: password
     email: dangminhtruong@github.com
-    repo: dangminhtruong/test
+    repo: dangminhtruong/Havana_Laravel
