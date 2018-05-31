@@ -8,6 +8,9 @@ build:
     image: dangminhtruong/dockerlaravel:latest
     commands:
     - eslint resources/assets/js
+    - phpmd app
+    - phpcpd
+    - phpmetrics
     - echo dangminhtruong
 compose:
   database:
