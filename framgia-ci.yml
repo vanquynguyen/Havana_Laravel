@@ -1,11 +1,11 @@
 build:
   phpunit:
-    image: framgia/laravel-workspace
+    image: framgia/laravel-workspace:latest
     commands:
     - composer install
     - vendor/bin/phpunit
   phpcs:
-    image: dangminhtruong/dockerlaravel
+    image: dangminhtruong/dockerlaravel:latest
     commands:
     - phpcs app
 compose:
