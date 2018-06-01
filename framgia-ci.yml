@@ -1,6 +1,6 @@
 build:
   phpunit:
-    image: dangminhtruong/dockerlaravel:latest
+    image: dangminhtruong/dockerlarav:latest
     commands:
     - composer install
     - vendor/bin/phpunit
