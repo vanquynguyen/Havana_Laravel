@@ -5,7 +5,7 @@ build:
     - composer install
     - vendor/bin/phpunit
   phpcs:
-    image: dangminhtruong/dockerlaravel:latest
+    image: dangminhtruong/dockerlarav:latest
     commands:
     - eslint resources/assets/js
     - phpmd app
