@@ -11,7 +11,8 @@ build:
     - phpmd app
     - phpcpd app
     - phpmetrics app
-    - echo dangminhtruong
+    - phpcs --standard=Framgia app
+    - echo build ended!
 compose:
   database:
     image: mysql
