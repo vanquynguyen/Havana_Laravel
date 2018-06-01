@@ -25,5 +25,5 @@ deploy:
   docker:
     username: octoca
     password: password
-    email: xdangminhtruongx@gmail.com
-    repo: dangminhtruong/Havana_Laravel
+    email: nguyenvanquy@gmail.com
+    repo: nguyenvanquy/Havana_Laravel
